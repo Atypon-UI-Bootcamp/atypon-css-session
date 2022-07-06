@@ -10,8 +10,6 @@
 
 - ### [Reflow video](https://youtu.be/dndeRnzkJDU)
 
-***
-
 ## BASICS
 - ### [CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
@@ -23,7 +21,6 @@
 
 - ### [Google guidelines for HTML & CSS](https://google.github.io/styleguide/htmlcssguide.html)
 
-***
 
 ## LAYOUT
 
@@ -35,14 +32,12 @@
 
 - ### [Complete guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-***
 
 ## SASS
 
 - ### [Online SASS](https://www.sassmeister.com/)
 - ### [Documentation](https://sass-lang.com/documentation/)
 
-***
 
 ## METHODOLOGIES
 
