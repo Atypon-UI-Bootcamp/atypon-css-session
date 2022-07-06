@@ -1,0 +1,14 @@
+@media screen {
+    ul {
+        margin-inline: 3px;
+        background-color: lightblue;
+        color: black;
+    }
+}
+
+@media print {
+    ul {
+        margin-inline: 30px
+    }
+}
+

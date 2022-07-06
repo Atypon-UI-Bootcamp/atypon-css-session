@@ -1,0 +1,56 @@
+@layer base, components;
+
+@layer base {
+    .box p {
+        color: green;
+    }
+}
+
+/* will override base if it has higher specifity */
+@layer components {
+    .card {
+        background: white;
+        width: max(300px, 30%);
+        padding: 1rem;
+    }
+    .box {
+        background: black;
+    }
+    p {
+        color: white
+    }
+}
+
+/* will override all layers even if it has lower specifity */
+p {
+    color: aqua;
+}
+
+/* we can cascade layer in each other */
+
+@layer app {
+    @layer layout {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+
+@layer app.layout {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .grid-3 {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+
+@import url('./extra-layers.css') layer(my-lib);

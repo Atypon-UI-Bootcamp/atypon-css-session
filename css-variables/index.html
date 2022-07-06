@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+</head>
+<script>
+    const mediaQuery = window.matchMedia( '( min-width: 768px )' )
+</script>
+<body>
+  <main>
+    <h1>CSS variables</h1>
+    <h2>default</h2>
+    <button class="btn btn-primary">primary button</button>
+    <button class="btn btn-secondary">secondary button</button>
+
+    <section class="css-override">
+        <h2>overriden</h2>
+
+        <button class="btn btn-primary">primary button</button>
+        <button class="btn btn-secondary">secondary button</button>
+    </section>
+    <h2>normal again</h2>
+    <button class="btn btn-primary">primary button</button>
+    <button class="btn btn-secondary">secondary button</button>
+  </main>
+</body>
+</html>

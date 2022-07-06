@@ -1,0 +1,20 @@
+@keyframes playloop {
+    0%   {background-color: lightcoral;}
+    50%  {background-color: red;}
+    100%  {background-color: firebrick;}
+}
+
+ul {
+    animation: playloop 1s infinite linear alternate;
+    background-color: blue;
+    color: white;
+
+    
+}
+
+::marker {
+    background-color: black;
+    content: "dasdsda";
+    color: black;
+    text-indent: 30px!important;
+}

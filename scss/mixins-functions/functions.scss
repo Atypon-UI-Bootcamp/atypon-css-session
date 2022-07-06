@@ -1,0 +1,11 @@
+@function toRem($pixels) {
+    @return #{$pixels/16}rem;
+}
+
+h1 {
+    font-size: toRem(16);
+}
+
+h1 {
+    font-size: toRem(14); //0.875rem
+}

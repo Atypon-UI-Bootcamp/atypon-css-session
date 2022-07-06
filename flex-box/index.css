@@ -1,0 +1,37 @@
+
+.card-list {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.card-list--equal-width .card {
+    flex: 1;
+}
+
+.card-list--wrap,
+.card-list--custom-width {
+    flex-wrap: wrap;
+}
+
+.card-list--wrap .card {
+    flex: calc(100%/4);
+}
+
+.card-list--custom-width .card {
+    flex: 200px;
+}
+
+.card-list--custom-width .card:nth-child(2) {
+    flex: 600px;
+}
+
+.card-list--column {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-list--column .card {
+    flex: 150px; /* controls height now */
+    width: 50%;
+}

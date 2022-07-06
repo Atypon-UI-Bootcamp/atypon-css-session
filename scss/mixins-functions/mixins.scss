@@ -1,0 +1,26 @@
+@mixin media($screen-size) {
+    $media-screen: 576px;
+    @if $screen-size == 'md' {
+        $media-screen: 768px;
+    } @else if $screen-size == 'lg' {
+        $media-screen: 992px
+    }
+
+    @if $screen-size == 'xs' {
+        @content;
+    }@else {
+        @media (min-width: $media-screen) {
+            @content;
+        }
+    }
+  }
+
+ @include media('sm') {
+    h2 { background-color: red;}
+ }
+
+ h3 {
+    @include media('sm') {
+        span { background-color: red;}
+     }
+ }

@@ -1,0 +1,33 @@
+:root {
+    --primary: #0d0d0d;
+    --secondary: red;
+}
+.btn-primary {
+    /* #0d0d0d */
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn {
+    appearance: none;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+    outline: 0;
+}
+
+
+.btn-secondary {
+    /* red */
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.css-override {
+    /* with only this your classes are updated in this selector scope to the given values */
+    --primary: green;
+    --secondary: rgb(157, 157, 29);
+}
+

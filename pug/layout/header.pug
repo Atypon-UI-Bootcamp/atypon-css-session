@@ -1,0 +1,14 @@
+-
+    const items = [
+        'item',
+        'item',
+        'item',
+        'item',
+        'item',
+    ]
+
+header.page-header
+    nav.top-nav
+        ul.top-nav__list
+            each item, key in items
+                li #{item} - #{key}

@@ -1,0 +1,63 @@
+$variable-name: #000;
+body {
+    color: $variable-name;
+}
+
+//using default
+$black-color: #0b0b0b;
+ //this will be ignored! since the variable is already defined
+$black-color: #000 !default;
+$border-radius: 0.25rem !default;
+$box-shadow: 0.0.5rem 1rem rgba($black-color, 0.15) !default;
+
+.some-class {
+    color: $black-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+
+// scoping
+$some-global-variable: #0b0b0b;
+
+.another-class {
+    $local-variable: dark-gray;
+    color: $some-global-variable;
+    background-color: $local-variable;
+}
+
+.just-another {
+    color: $some-global-variable;
+    // background-color: $local-variable;//will fail
+}
+
+//shadowing
+$some-variable: #0b0b0b;
+
+.yet-another-class {
+    //will be treated as new variable,
+    //won't override the original one
+    $some-variable: red; 
+    color: $some-variable;
+}
+
+.oh-god-just-another-one {
+    color: $some-variable;// #0b0b0b
+}
+
+// interpolation;
+$card-base-classname: 'card';
+
+.#{$card-base-classname} {
+    background-color: white;
+    color: black;
+}
+
+.#{$card-base-classname}--inverse {
+    background-color: #000;
+    color: white;
+}
+
+.#{$card-base-classname}--rounded {
+    border-radius: 1rem;
+}

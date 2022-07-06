@@ -1,0 +1,27 @@
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    .card {
+        background-color: rgb(65, 59, 59);
+    }
+} */
+
+.card-list {
+    display: grid;
+    gap: 1rem;
+}
+
+
+@media screen and (min-width: 991px) {
+    .card-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}

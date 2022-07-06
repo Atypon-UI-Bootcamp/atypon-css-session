@@ -1,0 +1,51 @@
+.btn {
+    appearance: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+
+    // this means & is the parent
+    // .btn-primary
+    &-primary {
+        background-color: blue;
+        color: white;
+    }
+
+    // .btn-secondary
+    &-secondary {
+        background-color: white;
+        background-color: black;
+
+        // .btn-secondary--flat
+        &--outlined {
+            border: 1px solid black;
+        }
+    }
+
+    &:hover {
+        color: red;
+    }
+}
+
+div {
+    $root:&;
+    padding: 10px;
+
+    a {
+        text-decoration: none;
+
+        // (pointless) div a
+        & {
+            color: black;
+        }
+        // div a:hover
+        &:hover {
+            color: blue;
+        }
+
+        // div a div
+        #{$root} {
+            color: red;
+        }
+    }
+}

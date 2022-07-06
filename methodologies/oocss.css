@@ -1,0 +1,25 @@
+.flex {
+    display: flex;
+}
+.block {
+    display: block;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.button {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.primary {
+    background-color: blue;
+    color: white;
+}
+
+.secondary {
+    background-color: red;
+    color: white;
+}

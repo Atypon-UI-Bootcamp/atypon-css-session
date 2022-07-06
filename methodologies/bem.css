@@ -1,0 +1,39 @@
+.button {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.button--primary {
+    background-color: blue;
+    color: white;
+}
+
+.button--secondary {
+    background-color: red;
+    color: white;
+}
+
+.card {
+    /* rules */
+}
+
+.card__title {
+    /* rules */
+}
+
+.card__content {
+    /* rules */
+}
+
+.card--shadowed {
+    /* rules */
+}
+
+/* new block */
+.card-list {
+    /* rules */
+}
+
+.card-list__item {
+    /* rules */
+}

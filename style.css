@@ -1,0 +1,139 @@
+html {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes to-right {
+    from {
+        right: 0.675rem;
+    }
+    to {
+        right: 0.875rem;
+    }
+}
+@keyframes to-left {
+    from {
+        left: 0.675rem;
+    }
+    to {
+        left: 0.875rem;
+    }
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.order-3 {
+    order: 3;
+}
+
+.order-2 {
+    order: 2
+}
+
+.order-1 {
+    order: 1;
+}
+
+.next,
+.previous {
+    background-color: aqua;
+    text-decoration: none;
+    color: #0b0b0b;
+    box-shadow: 0rem 0.25rem 1rem #00000030;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.next:hover,
+.previous:hover {
+    box-shadow: 0 0.75rem 1rem #00000030;
+}
+.next:hover::after,
+.next:hover::before {
+    animation: to-right 200ms ease-out infinite alternate;
+}
+.previous:hover::after,
+.previous:hover::before {
+    animation: to-left 200ms ease-out infinite alternate;
+}
+.next::after,
+.next::before,
+.previous::after,
+.previous::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #0b0b0b;
+    height: 1px;
+    width: 0.375rem;
+}
+
+.next::after,
+.next::before {
+    right: 0.675rem;
+}
+
+.previous::before,
+.previous::after {
+    left: 0.675rem;
+}
+
+.next::after {
+    top: 14px;
+    transform: rotate(40deg);
+}
+
+.next::before {
+    bottom: 14px;
+    transform: rotate(-40deg);
+}
+
+.previous::after {
+    top: 14px;
+    transform: rotate(-40deg);
+}
+
+.previous::before {
+    bottom: 14px;
+    transform: rotate(40deg);
+}
+
+.card {
+    box-shadow: 0rem 0.5rem 1rem #00000030;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    transition: box-shadow 200ms;
+}
+
+.card:hover {
+    box-shadow: 0rem 0.875rem 1rem #00000030;
+}

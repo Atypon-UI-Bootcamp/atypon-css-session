@@ -1,0 +1,11 @@
+@media(min-width: 576px) {
+    h2 {
+        background-color: red
+    }
+}
+
+@media(min-width: 576px) {
+    h3 span {
+        background-color: red
+    }
+}

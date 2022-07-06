@@ -1,0 +1,65 @@
+.card-list {
+    display: grid;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.title {
+    margin: 3rem 1rem 2rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+
+.card-list--columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-list--row {
+    /* this mean 1fr >, not will limit the items onto one column, 
+    however if we give the grid more fr than the items it has it will add a space  */
+    grid-template-rows: 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+}
+
+.card-list--grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-list--grid-2 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.card-list--grid-3 {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.card-list--grid-4 {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.card-list--area {
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas:
+      "header  content"
+      "sidebar  content"
+      "sidebar  content";
+}
+
+.card-list__header {
+    grid-area: header;
+    background-color: khaki;
+}
+
+.card-list__sidebar {
+    grid-area: sidebar;
+    background-color: azure;
+    padding: 1rem;
+}
+.card-list__content {
+    grid-area: content;
+}
+.card-list__content .card {
+    margin-bottom: 1rem;
+}
